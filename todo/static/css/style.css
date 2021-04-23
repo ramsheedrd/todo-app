@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin:0;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f1f3f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.txt {
+    box-shadow: 0 6px 8px rgb(85 102 119 / 3%), 0 1px 1px rgb(85 102 119 / 40%);
+    font-size: 1.3em;
+    padding: 13px;
+    outline: none;
+    width:300px
+}
+
+.result-wrapper{
+    margin-top: 1.5em;
+}
+
+.result-wrapper div {
+    background: linear-gradient(15deg,#745fb5,#9a6dbb);
+    color: #fff;
+    text-align: left;
+    padding: 16px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(85 102 119 / 55%);
+    text-shadow: 0 1px 1px rgb(51 68 85 / 30%);
+    white-space: nowrap;
+    margin-bottom: 0.5em;
+    display: flex;
+}
+
+.result-wrapper div p{
+    flex-grow: 1;
+}
+
+.result-wrapper div a {
+    margin-left: 10px;
+    color: white;
+}
+
+.confirm-text{
+    font-size: 2em;
+}
+
+.del-btn {
+    background: linear-gradient(15deg,#ef5350,#c62828);
+    color: #fff;
+    text-align: left;
+    padding: 10px 16px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(85 102 119 / 55%);
+    margin-top: 2em;
+}
+
+.no-btn {
+    background: linear-gradient(15deg,#50ef9f,#28c628);
+    color: #fff;
+    text-align: left;
+    padding: 10px 16px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(85 102 119 / 55%);
+}
+
+.messages {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.messages p {
+
+    color: #fff;
+    text-align: left;
+    padding: 10px 16px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgb(85 102 119 / 55%);
+    margin-top: 2em;
+}
+
+p.success{
+    background: linear-gradient(15deg,#7def50,#17921d);
+}
+
+p.error {
+    background: linear-gradient(15deg,#ef5350,#c62828);
+}

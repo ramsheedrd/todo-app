@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <main>
+        <div class="form-wrapper">
+            <form action="/create/" method="post">
+                {% csrf_token %}
+                <input placeholder="Type Something..!" type="text" name="todo" class="txt">
+                <button hidden class="save-btn">save</button>
+            </form>
+        </div>
+
+        <div class="result-wrapper">
+            {% for todo in object_list %}
+            <div>
+                <p>{{ todo.value }}</p>
+                <a href="/update/{{ todo.id }}/" class="">
+                    <i class="fas fa-pencil-alt"></i>
+                </a>
+                <a href="/delete/{{ todo.id }}/">
+                    <i class="far fa-trash-alt"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </main>
+
+    <div class="messages">
+        {% for msg in messages %}
+        <p class="msg {{ msg.tags }}"> {{ msg }} </p>
+        {% endfor %}
+    </div>
+    
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
