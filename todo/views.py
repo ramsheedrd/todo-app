@@ -15,7 +15,7 @@ class HomeView(ListView):
 
 def create_todo(request):
     if request.method == 'POST':
-        todo = request.POST['todo']
+        todo = request.POST.get('post')
         obj = TodoModel(value = todo)
         obj.save()
         messages.success(request, 'Todo Item Added')
